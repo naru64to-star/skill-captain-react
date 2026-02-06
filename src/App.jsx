@@ -1,6 +1,7 @@
-function App(){
+ import Header from "./Components/Header";
+ export default function App(){
     return(
-        <main>
+        <>
      <h1>hello world </h1>
      <h2>hey that my first website</h2>
 
@@ -23,9 +24,9 @@ function App(){
   <li>Banana</li>
   <li>Mango</li>
 </ul>
+ <Header/>
 
-        </main>
+        </>
     )
 }
 
-export default App;
