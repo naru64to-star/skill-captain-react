@@ -1,17 +1,20 @@
- import Header from "./Components/Header";
+ import { useState } from "react";
  export default function App(){
+     const[count,setCount]=useState(0);
+    
     return(
         <>
-
-<h1 className="head">hello day 2</h1>
-
- <Header name="Nitish" age={20} address="Kolkata"/>
- <Header name="Preeti" age={17} address="Chandigarh"/>
-<Header name="Rajni" age={18} address="Chandigarh"/>
-<Header name="Ujjwal" age={19} address="Chandigarh"/>
-
+ <h1>Count{count}</h1>
+   <button onClick={()=>setCount(count=>count+1)}>Click increas me</button>
+   <br></br>
+   <button onClick={()=>setCount(0)}>Reset me</button>
+   <button onClick={()=>setCount(count=>count-1)}>reverse</button>
+        
         </>
     )
 }
+
+    
+   
 
 
