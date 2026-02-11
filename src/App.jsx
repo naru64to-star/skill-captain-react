@@ -2,31 +2,16 @@
  export default function App(){
     return(
         <>
-     <h1>hello world </h1>
-     <h2>hey that my first website</h2>
 
-     <p>explore this website and share your experience</p>
-     <div>
-        box 1
-     </div>
-<b>wonderful experience</b>
-<br></br>
+<h1 className="head">hello day 2</h1>
 
-<i>good morning</i>
-<ol>
-  <li>HTML</li>
-  <li>CSS</li>
-  <li>JavaScript</li>
-</ol>
-
-<ul>
-  <li>Apple</li>
-  <li>Banana</li>
-  <li>Mango</li>
-</ul>
- <Header/>
+ <Header name="Nitish" age={20} address="Kolkata"/>
+ <Header name="Preeti" age={17} address="Chandigarh"/>
+<Header name="Rajni" age={18} address="Chandigarh"/>
+<Header name="Ujjwal" age={19} address="Chandigarh"/>
 
         </>
     )
 }
+
 

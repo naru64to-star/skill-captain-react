@@ -1,9 +1,8 @@
- export default function Header(){
+ export default function Header(props){
     return(
         <>
-        <h1>This is website about</h1>
-     <p>this content help you to grow your persnality</p>
-    
+       
+    <h1>My name is {props.name} my age is {props.age} and my adress is {props.address}.</h1>
         </>
-    );
+    )
 }
