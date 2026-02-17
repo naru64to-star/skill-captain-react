@@ -1,23 +1,22 @@
  import { useEffect, useState } from "react";
  export default function App(){
-    const[show, setShow] = useState(false);
+    
+    const fruits=["Apple","Mango","Banana","orange","pine-Apple","Grapes"]
+
+    const btn=[1,2,3,4,5,6,">>"]
+
     return(
     
         <>
-        <h1>day 5</h1>
-   <button onClick={()=>setShow(!show)}>Click increas me</button>
-   
-   {show &&(
-        <>
-        <p> thanks for click me</p>
-        <h1>welcome here</h1>
-        </>
-    )
-   }
+        <h1>day 6</h1>
 
-   <h3>welcome my website</h3>
-   
-        
+   <ul>
+{fruits.map((item,index)=>(
+<li key={index}>{item}</li>
+))}
+   </ul>
+   {btn.map((item,index)=>(
+    <button key={index}>{item}</button>))}
         </>
     )
 }
