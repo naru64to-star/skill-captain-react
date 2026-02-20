@@ -14,24 +14,24 @@
 
     return(
     <>
-<h1>Signup form</h1>
+<h1 className="head">Signup form</h1>
 <form onSubmit={handleDone}>
-    <label>Name:</label>
-    <input 
+    <label className="label">Name:</label>
+    <input className="label2"
     type="text" placeholder="enter your name" value={name}
     onChange={(e)=>setName(e.target.value)}
     required></input>
 
     <br></br>
 <br></br>    
-    <label>Email:</label>
-    <input 
+    <label className="label">Email:</label>
+    <input className="label2"
     type="email"  placeholder="enter your email" value={email}
     onChange={(e)=>setEmail(e.target.value)}
     required></input>
     <br></br>
     <br></br>
-    <button type="submit">Submit</button>
+    <button className="btn" type="submit">Submit</button>
 
     </form>   
         </>
