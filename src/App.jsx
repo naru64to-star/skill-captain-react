@@ -1,44 +1,22 @@
- import {useState } from "react";
- export default function App(){
-    const[name,setName]= useState("");
-    const[email,setEmail]=useState("");
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from "./Layout/Layout";
+import Home from "./Components/Home";
+import About from "./Components/About";
+import Contact  from "./Components/Contact";
 
-    const handleDone=(e)=>{
-        e.preventDefault();
-        console.log(name);
-        console.log(email);
 
-        setName("");
-        setEmail("");
-    }
-
-    return(
+export default function App(){
+  return(
     <>
-<h1 className="head">Signup form</h1>
-<form onSubmit={handleDone}>
-    <label className="label">Name:</label>
-    <input className="label2"
-    type="text" placeholder="enter your name" value={name}
-    onChange={(e)=>setName(e.target.value)}
-    required></input>
-
-    <br></br>
-<br></br>    
-    <label className="label">Email:</label>
-    <input className="label2"
-    type="email"  placeholder="enter your email" value={email}
-    onChange={(e)=>setEmail(e.target.value)}
-    required></input>
-    <br></br>
-    <br></br>
-    <button className="btn" type="submit">Submit</button>
-
-    </form>   
-        </>
-    )
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Layout/>}>
+      <Route index element={<Home/>}/>
+      <Route path="about" element={<About/>}/>
+      <Route path="contact" element={<Contact/>}/>
+      </Route>
+    </Routes>
+    </BrowserRouter>
+    </>
+  )
 }
-
-    
-   
-
-
