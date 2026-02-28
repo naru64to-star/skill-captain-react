@@ -1,104 +1,94 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+/* Container styling */
+.todo-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(108, 99, 255, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  color: #6c63ff; /* Primary Purple */
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Input section */
+.todo-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #f0f0f5;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #6c63ff;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
-*{
-  background-color:;
-  font-family: 'Courier New', Courier, monospace;
-  text-align: center;
-  align-items: center;
-
-}
-
-.head{
-  color: blue;
-  text-align: center;
-  font-weight: 1000px;
-  margin-left: 500px;
-  font-size: 70px;
-}
-
-.label{
-  color: #c0a0a0;
-  font-size: 20px;
-  margin-left: 500px;
-}
-.label2{
-  background-color: pink;
-  border: #646cff;
+  background-color: #6c63ff;
   color: white;
-  height: 30px;
-  border-radius: 7px;
-  font-size: 17px;
-  margin-left: 5px;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.1s ease;
 }
-.btn{
-margin-left: 700px;
-background-color: #213547;
-color: aqua;
+
+button:hover {
+  background-color: #554edb;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* List styling */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #fdfdff;
+  margin-bottom: 10px;
+  padding: 12px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  border-left: 4px solid #6c63ff; /* Purple accent stripe */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.3s ease;
+}
+
+/* "Complete" button variant */
+li button {
+  background-color: transparent;
+  color: #ff6b6b; /* Reddish for removal, or change to #6c63ff for purple */
+  font-size: 0.85rem;
+  padding: 5px 10px;
+}
+
+li button:hover {
+  background-color: #fff0f0;
+  color: #fa5252;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }

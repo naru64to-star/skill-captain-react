@@ -54,6 +54,7 @@ export default function Header() {
                 <li><a href="/" style={styles.link} onMouseOver={(e) => e.target.style.color = '#000'} onMouseOut={(e) => e.target.style.color = '#555'}>Home</a></li>
                 <li><a href="/about" style={styles.link} onMouseOver={(e) => e.target.style.color = '#000'} onMouseOut={(e) => e.target.style.color = '#555'}>About</a></li>
                 <li><a href="/contact" style={styles.link} onMouseOver={(e) => e.target.style.color = '#000'} onMouseOut={(e) => e.target.style.color = '#555'}>Contact</a></li>
+                <li><a href="/todo" style={styles.link} onMouseOver={(e) => e.target.style.color = '#000'} onMouseOut={(e) => e.target.style.color = '#555'}>Todo</a></li>
             </ul>
 
             {/* Utility Section (Cart/Search) */}
