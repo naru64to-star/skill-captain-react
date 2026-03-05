@@ -1,26 +1,13 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Layout from "./Layout/Layout";
-import Home from "./Components/Home";
-import About from "./Components/About";
-import Contact  from "./Components/Contact";
-import Todo  from "./Components/Todo";
-
-
-
+import Header from "./Components/Header";
 export default function App(){
   return(
     <>
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Layout/>}>
-      <Route index element={<Home/>}/>
-      <Route path="about" element={<About/>}/>
-      <Route path="contact" element={<Contact/>}/>
-       <Route path="todo" element={<Todo/>}/>
-     </Route>
+    <h1>Hello! weelcome my website</h1>
+    <Header name="Rajni" age={18}/>
+    <Header name="Mirali" age={18}/>
 
-    </Routes>
-    </BrowserRouter>
+
     </>
+
   )
 }
