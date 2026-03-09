@@ -1,13 +1,18 @@
-import Header from "./Components/Header";
-export default function App(){
-  return(
-    <>
-    <h1>Hello! weelcome my website</h1>
-    <Header name="Rajni" age={18}/>
-    <Header name="Mirali" age={18}/>
 
+import React from 'react';
+import './App.css';
+import UserContext from './Components/UserContext';
+import UserDashboard from './Components/UserDashboard';
 
-    </>
+export default function App() {
+  const user = { name: 'Jane Smith', email: 'jane@example.com' };
 
-  )
+  return (
+    <div className="App">
+      <h1>Context API Demo</h1>
+      <UserContext.Provider value={user}>
+        <UserDashboard />
+      </UserContext.Provider>
+    </div>
+  );
 }
